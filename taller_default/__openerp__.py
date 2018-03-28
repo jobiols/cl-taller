@@ -19,7 +19,7 @@
 #
 # -----------------------------------------------------------------------------
 {
-    'name': 'Iomaq',
+    'name': 'Taller',
     'version': '9.0.0.0.0',
     'license': 'Other OSI approved licence',
     'category': 'Tools',
