@@ -1,1 +1,2 @@
+cl-taller https://github.com/jobiols/cl-taller 9.0
 odoo-addons https://github.com/jobiols/odoo-addons 9.0

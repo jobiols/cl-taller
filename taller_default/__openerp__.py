@@ -41,7 +41,7 @@
         'account_fix',  # Account Fixes
         'account_invoice_tax_wizard',  # add manual taxes on invoices
         'web_export_view',  # exportar vistas en excel
-        'account_clean_cancelled_invoice_number', #  borrar facturas canceladas
+        'account_clean_cancelled_invoice_number',  # borrar facturas canceladas
     ],
 
     'data': [
