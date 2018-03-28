@@ -1,0 +1,1 @@
+odoo-addons https://github.com/jobiols/odoo-addons 9.0
