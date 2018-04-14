@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <!-- Action	to open	product brand -->
+        <record model="ir.actions.act_window" id="action_product_brand">
+            <field name="name">Product Brand</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">product_brand</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- Action	to open	vehicle model -->
+        <record model="ir.actions.act_window" id="action_vehicle_model">
+            <field name="name">Vehicle Model</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">vehicle_model</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- Action	to open	vehicle brand -->
+        <record model="ir.actions.act_window" id="action_vehicle_brand">
+            <field name="name">Vehicle Brand</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">vehicle_brand</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="storeroom_main_menu"
+                  name="storeroom"
+                  parent="stock.menu_stock_root"/>
+
+        <menuitem id="storeroom_vehicle_brand_menu"
+                  action="action_vehicle_brand"
+                  name="vehicle_brand"
+                  parent="storeroom_main_menu"/>
+
+        <menuitem id="storeroom_vehicle_model_menu"
+                  action="action_vehicle_model"
+                  name="vehicle_model"
+                  parent="storeroom_main_menu"/>
+
+        <menuitem id="storeroom_product_brand_menu"
+                  action="action_product_brand"
+                  name="product_brand"
+                  parent="storeroom_main_menu"/>
+
+    </data>
+</openerp>

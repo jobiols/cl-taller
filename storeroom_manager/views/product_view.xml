@@ -18,7 +18,7 @@
             </field>
         </record>
 
-        <!-- cambiar nombre a default_code -->
+        <!-- cambiar nombre a default_code y agregar demas campos -->
         <record id="product_template_only_form_view" model="ir.ui.view">
             <field name="name">Storeroom Manager: customization</field>
             <field name="model">product.template</field>
@@ -26,7 +26,7 @@
                    ref="product.product_template_only_form_view"/>
             <field name="arch" type="xml">
                 <xpath expr="//field[@name='default_code']" position="before">
-                    <field name="vehicle_brand"/>
+                    <field name="vehicle_brand" widget="many2many_tags"/>
                     <field name="vehicle_model"/>
                     <field name="product_brand"/>
                 </xpath>

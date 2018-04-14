@@ -12,16 +12,19 @@ class ProductProduct(models.Model):
     warehouse_location = fields.Char(
         help="Warehouse location Tower / Shelf"
     )
-    product_brand = fields.Char(
-        help="Product Brand"
-    )
-    product_code = fields.Char(
-        help="Product code"
-    )
-    vehicle_brand = fields.Char(
+    vehicle_brand = fields.Many2many(
+        'vehicle_brand',
+        ondelete='cascade',
         help="Vehicle brand"
     )
-    vehicle_model = fields.Char(
+    vehicle_model = fields.Many2one(
+        'vehicle_model',
+        ondelete='cascade',
         help="Vehicle model"
+    )
+    product_brand = fields.Many2one(
+        'product_brand',
+        ondelete='cascade',
+        help="Product Brand"
     )
 

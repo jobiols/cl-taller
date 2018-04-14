@@ -4,10 +4,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 9.0c-20171230\n"
+"Project-Id-Version: Odoo Server 9.0c-20180313\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-07 00:06+0000\n"
-"PO-Revision-Date: 2018-04-07 00:06+0000\n"
+"POT-Creation-Date: 2018-04-14 21:42+0000\n"
+"PO-Revision-Date: 2018-04-14 21:42+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -16,6 +16,63 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: storeroom_manager
+#: model:ir.model.fields,field_description:storeroom_manager.field_product_brand_create_uid
+#: model:ir.model.fields,field_description:storeroom_manager.field_vehicle_brand_create_uid
+#: model:ir.model.fields,field_description:storeroom_manager.field_vehicle_model_create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: storeroom_manager
+#: model:ir.model.fields,field_description:storeroom_manager.field_product_brand_create_date
+#: model:ir.model.fields,field_description:storeroom_manager.field_vehicle_brand_create_date
+#: model:ir.model.fields,field_description:storeroom_manager.field_vehicle_model_create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: storeroom_manager
+#: model:ir.model.fields,field_description:storeroom_manager.field_product_brand_display_name
+#: model:ir.model.fields,field_description:storeroom_manager.field_vehicle_brand_display_name
+#: model:ir.model.fields,field_description:storeroom_manager.field_vehicle_model_display_name
+msgid "Display Name"
+msgstr "Mostrar Nombre"
+
+#. module: storeroom_manager
+#: model:ir.model.fields,field_description:storeroom_manager.field_product_brand_id
+#: model:ir.model.fields,field_description:storeroom_manager.field_vehicle_brand_id
+#: model:ir.model.fields,field_description:storeroom_manager.field_vehicle_model_id
+msgid "ID"
+msgstr "ID"
+
+#. module: storeroom_manager
+#: model:ir.model.fields,field_description:storeroom_manager.field_product_brand___last_update
+#: model:ir.model.fields,field_description:storeroom_manager.field_vehicle_brand___last_update
+#: model:ir.model.fields,field_description:storeroom_manager.field_vehicle_model___last_update
+msgid "Last Modified on"
+msgstr "Última modificación en"
+
+#. module: storeroom_manager
+#: model:ir.model.fields,field_description:storeroom_manager.field_product_brand_write_uid
+#: model:ir.model.fields,field_description:storeroom_manager.field_vehicle_brand_write_uid
+#: model:ir.model.fields,field_description:storeroom_manager.field_vehicle_model_write_uid
+msgid "Last Updated by"
+msgstr "Última actualización realizada por"
+
+#. module: storeroom_manager
+#: model:ir.model.fields,field_description:storeroom_manager.field_product_brand_write_date
+#: model:ir.model.fields,field_description:storeroom_manager.field_vehicle_brand_write_date
+#: model:ir.model.fields,field_description:storeroom_manager.field_vehicle_model_write_date
+msgid "Last Updated on"
+msgstr "Última actualización en"
+
+#. module: storeroom_manager
+#: model:ir.model.fields,field_description:storeroom_manager.field_product_brand_name
+#: model:ir.model.fields,field_description:storeroom_manager.field_vehicle_brand_name
+#: model:ir.model.fields,field_description:storeroom_manager.field_vehicle_model_name
+msgid "Name"
+msgstr "Nombre"
+
+#. module: storeroom_manager
+#: model:ir.actions.act_window,name:storeroom_manager.action_product_brand
 #: model:ir.model.fields,help:storeroom_manager.field_product_template_product_brand
 msgid "Product Brand"
 msgstr "Marca del repuesto"
@@ -31,12 +88,6 @@ msgid "Product brand"
 msgstr "Marca del repuesto"
 
 #. module: storeroom_manager
-#: model:ir.model.fields,field_description:storeroom_manager.field_product_template_product_code
-#: model:ir.model.fields,help:storeroom_manager.field_product_template_product_code
-msgid "Product code"
-msgstr "Codigo del repuesto"
-
-#. module: storeroom_manager
 #: model:ir.model.fields,field_description:storeroom_manager.field_product_template_storeroom_location
 msgid "Storeroom location"
 msgstr "Ubicacion de pañol"
@@ -47,16 +98,26 @@ msgid "Storeroom location Tower / Shelf"
 msgstr "Ubicacion de pañol Fila / Estante"
 
 #. module: storeroom_manager
+#: model:ir.actions.act_window,name:storeroom_manager.action_vehicle_brand
+msgid "Vehicle Brand"
+msgstr "Marca del vehículo"
+
+#. module: storeroom_manager
+#: model:ir.actions.act_window,name:storeroom_manager.action_vehicle_model
+msgid "Vehicle Model"
+msgstr "Modelo del vehículo"
+
+#. module: storeroom_manager
 #: model:ir.model.fields,field_description:storeroom_manager.field_product_template_vehicle_brand
 #: model:ir.model.fields,help:storeroom_manager.field_product_template_vehicle_brand
 msgid "Vehicle brand"
-msgstr "Marca del vehiculo"
+msgstr "Marca del vehículo"
 
 #. module: storeroom_manager
 #: model:ir.model.fields,field_description:storeroom_manager.field_product_template_vehicle_model
 #: model:ir.model.fields,help:storeroom_manager.field_product_template_vehicle_model
 msgid "Vehicle model"
-msgstr "Modelo del vehiculo"
+msgstr "Modelo del vehículo"
 
 #. module: storeroom_manager
 #: model:ir.model.fields,field_description:storeroom_manager.field_product_template_warehouse_location
@@ -69,6 +130,29 @@ msgid "Warehouse location Tower / Shelf"
 msgstr "Ubicacion de subsuelo Fila / Estante"
 
 #. module: storeroom_manager
+#: model:ir.model,name:storeroom_manager.model_product_brand
+#: model:ir.ui.menu,name:storeroom_manager.storeroom_product_brand_menu
+msgid "product_brand"
+msgstr "Marca del repuesto"
+
+#. module: storeroom_manager
 #: model:ir.ui.view,arch_db:storeroom_manager.product_template_only_form_view
 msgid "product_code"
 msgstr "Codigo del repuesto"
+
+#. module: storeroom_manager
+#: model:ir.ui.menu,name:storeroom_manager.storeroom_main_menu
+msgid "storeroom"
+msgstr "Pañol"
+
+#. module: storeroom_manager
+#: model:ir.model,name:storeroom_manager.model_vehicle_brand
+#: model:ir.ui.menu,name:storeroom_manager.storeroom_vehicle_brand_menu
+msgid "vehicle_brand"
+msgstr "Marca del vehículo"
+
+#. module: storeroom_manager
+#: model:ir.model,name:storeroom_manager.model_vehicle_model
+#: model:ir.ui.menu,name:storeroom_manager.storeroom_vehicle_model_menu
+msgid "vehicle_model"
+msgstr "Modelo del vehículo"
