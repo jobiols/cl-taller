@@ -42,6 +42,11 @@
         'account_invoice_tax_wizard',  # add manual taxes on invoices
         'web_export_view',  # exportar vistas en excel
         'account_clean_cancelled_invoice_number',  # borrar facturas canceladas
+
+        'product_template_search_by_barcode',
+
+        # aplicaciones desarrolladas
+        'storeroom_manager',
     ],
 
     'data': [

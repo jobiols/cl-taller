@@ -1,0 +1,74 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* storeroom_manager
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 9.0c-20171230\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-04-07 00:06+0000\n"
+"PO-Revision-Date: 2018-04-07 00:06+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: storeroom_manager
+#: model:ir.model.fields,help:storeroom_manager.field_product_template_product_brand
+msgid "Product Brand"
+msgstr "Marca del repuesto"
+
+#. module: storeroom_manager
+#: model:ir.model,name:storeroom_manager.model_product_template
+msgid "Product Template"
+msgstr "Plantilla de Producto"
+
+#. module: storeroom_manager
+#: model:ir.model.fields,field_description:storeroom_manager.field_product_template_product_brand
+msgid "Product brand"
+msgstr "Marca del repuesto"
+
+#. module: storeroom_manager
+#: model:ir.model.fields,field_description:storeroom_manager.field_product_template_product_code
+#: model:ir.model.fields,help:storeroom_manager.field_product_template_product_code
+msgid "Product code"
+msgstr "Codigo del repuesto"
+
+#. module: storeroom_manager
+#: model:ir.model.fields,field_description:storeroom_manager.field_product_template_storeroom_location
+msgid "Storeroom location"
+msgstr "Ubicacion de pañol"
+
+#. module: storeroom_manager
+#: model:ir.model.fields,help:storeroom_manager.field_product_template_storeroom_location
+msgid "Storeroom location Tower / Shelf"
+msgstr "Ubicacion de pañol Fila / Estante"
+
+#. module: storeroom_manager
+#: model:ir.model.fields,field_description:storeroom_manager.field_product_template_vehicle_brand
+#: model:ir.model.fields,help:storeroom_manager.field_product_template_vehicle_brand
+msgid "Vehicle brand"
+msgstr "Marca del vehiculo"
+
+#. module: storeroom_manager
+#: model:ir.model.fields,field_description:storeroom_manager.field_product_template_vehicle_model
+#: model:ir.model.fields,help:storeroom_manager.field_product_template_vehicle_model
+msgid "Vehicle model"
+msgstr "Modelo del vehiculo"
+
+#. module: storeroom_manager
+#: model:ir.model.fields,field_description:storeroom_manager.field_product_template_warehouse_location
+msgid "Warehouse location"
+msgstr "Ubicacion de almacen"
+
+#. module: storeroom_manager
+#: model:ir.model.fields,help:storeroom_manager.field_product_template_warehouse_location
+msgid "Warehouse location Tower / Shelf"
+msgstr "Ubicacion de subsuelo Fila / Estante"
+
+#. module: storeroom_manager
+#: model:ir.ui.view,arch_db:storeroom_manager.product_template_only_form_view
+msgid "product_code"
+msgstr "Codigo del repuesto"
