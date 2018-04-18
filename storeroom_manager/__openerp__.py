@@ -20,7 +20,7 @@
 # -----------------------------------------------------------------------------
 {
     'name': 'Storeroom Manager',
-    'version': '9.0.0.0.0',
+    'version': '9.0.0.0.1',
     'license': 'Other OSI approved licence',
     'category': 'Warehouse Management',
     'summary': 'Manejo del pañol',
@@ -30,6 +30,7 @@
     ],
 
     'data': [
+        'security/ir.model.access.csv',
         'views/product_view.xml',
         'views/storeroom_view.xml'
     ],
