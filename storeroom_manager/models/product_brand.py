@@ -4,8 +4,14 @@ from openerp import api, models, fields
 
 
 class ProductBrand(models.Model):
-    _name = "product_brand"
+    _name = "product.brand"
+    _description = 'Miscelaneous table Product Brands'
 
     name = fields.Char(
 
     )
+
+    _sql_constraints = [
+        ('uniq_product_brand', 'unique(name)',
+         "This product brand alerady exists, it must be unique !"),
+    ]

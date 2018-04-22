@@ -13,17 +13,17 @@ class ProductProduct(models.Model):
         help="Warehouse location Tower / Shelf"
     )
     vehicle_brand = fields.Many2many(
-        'vehicle_brand',
+        'vehicle.brand',
         ondelete='cascade',
         help="Vehicle brand"
     )
     vehicle_model = fields.Many2one(
-        'vehicle_model',
+        'vehicle.model',
         ondelete='cascade',
         help="Vehicle model"
     )
     product_brand = fields.Many2one(
-        'product_brand',
+        'product.brand',
         ondelete='cascade',
         help="Product Brand"
     )

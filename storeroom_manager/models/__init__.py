@@ -5,3 +5,4 @@ from . import product
 from . import product_brand
 from . import vehicle_brand
 from . import vehicle_model
+from . import storeroom_order

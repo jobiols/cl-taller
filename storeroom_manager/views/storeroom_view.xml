@@ -6,7 +6,7 @@
         <record model="ir.actions.act_window" id="action_product_brand">
             <field name="name">Product Brand</field>
             <field name="type">ir.actions.act_window</field>
-            <field name="res_model">product_brand</field>
+            <field name="res_model">product.brand</field>
             <field name="view_type">form</field>
             <field name="view_mode">tree,form</field>
         </record>
@@ -15,7 +15,7 @@
         <record model="ir.actions.act_window" id="action_vehicle_model">
             <field name="name">Vehicle Model</field>
             <field name="type">ir.actions.act_window</field>
-            <field name="res_model">vehicle_model</field>
+            <field name="res_model">vehicle.model</field>
             <field name="view_type">form</field>
             <field name="view_mode">tree,form</field>
         </record>
@@ -24,7 +24,7 @@
         <record model="ir.actions.act_window" id="action_vehicle_brand">
             <field name="name">Vehicle Brand</field>
             <field name="type">ir.actions.act_window</field>
-            <field name="res_model">vehicle_brand</field>
+            <field name="res_model">vehicle.brand</field>
             <field name="view_type">form</field>
             <field name="view_mode">tree,form</field>
         </record>

@@ -4,8 +4,14 @@ from openerp import api, models, fields
 
 
 class VehicleModel(models.Model):
-    _name = "vehicle_model"
+    _name = "vehicle.model"
+    _description = 'Miscelaneous table Vehicle Model'
 
     name = fields.Char(
 
     )
+
+    _sql_constraints = [
+        ('uniq_vehicle_model', 'unique(name)',
+         "This vehicle model already exists, it must be unique !"),
+    ]
