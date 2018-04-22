@@ -4,8 +4,15 @@ from openerp import api, models, fields
 
 
 class StoreroomOrder(models.Model):
-    _name = "storeroom.order"
+    _name = "storeroom_manager.storeroom.order"
     _description = 'Storeroom delivery orders'
+    _order = 'fecha_inicio desc, id desc'
+
+    order_line = fields.One2many(
+        'storeroom_manager.order.line',
+        'order_id',
+        string='Order Lines',
+    )
 
     informe_nro = fields.Char(
 
@@ -23,6 +30,52 @@ class StoreroomOrder(models.Model):
 
     )
 
-    km_entrada = fields.Integer(
+    km_entrada = fields.Char(
 
     )
+
+    state = fields.Selection([
+        ('draft', 'Draft'),
+        ('sent', 'Delivered')
+        ], string='Status', readonly=True, copy=False,
+        track_visibility='onchange', default='draft')
+
+    @api.multi
+    def action_confirm(self):
+        pass
+
+
+class StoreroomOrderLine(models.Model):
+    _name = 'storeroom_manager.order.line'
+    _description = 'Storeroom Order Line'
+    _order = 'order_id desc, sequence, id'
+
+    order_id = fields.Many2one(
+        'storeroom_manager.storeroom.order',
+        string='Order Reference',
+        required=True,
+        ondelete='cascade',
+        index=True,
+        copy=False
+    )
+
+    product_id = fields.Many2one(
+        'product.product',
+        string='Product',
+        change_default=True,
+        ondelete='restrict',
+        required=True)
+
+    sequence = fields.Integer(
+        string='Sequence',
+        default=10
+    )
+
+    state = fields.Selection([
+        ('draft', 'Quotation'),
+        ('sent', 'Quotation Sent'),
+        ('sale', 'Sale Order'),
+        ('done', 'Done'),
+        ('cancel', 'Cancelled'),
+        ], string='Status', readonly=True, copy=False,
+        track_visibility='onchange', default='draft')
