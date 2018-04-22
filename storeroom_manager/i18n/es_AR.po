@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 9.0c-20180313\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-22 15:26+0000\n"
-"PO-Revision-Date: 2018-04-22 15:26+0000\n"
+"POT-Creation-Date: 2018-04-22 20:51+0000\n"
+"PO-Revision-Date: 2018-04-22 20:51+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -16,102 +16,138 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: storeroom_manager
-#: model:ir.model.fields,field_description:storeroom_manager.field_product_brand_create_uid_6169
-#: model:ir.model.fields,field_description:storeroom_manager.field_storeroom_order_create_uid
-#: model:ir.model.fields,field_description:storeroom_manager.field_vehicle_brand_create_uid_6177
-#: model:ir.model.fields,field_description:storeroom_manager.field_vehicle_model_create_uid_6185
+#: model:ir.model.fields,field_description:storeroom_manager.field_storeroom_manager_order_line_create_uid
+#: model:ir.model.fields,field_description:storeroom_manager.field_storeroom_manager_product_brand_create_uid
+#: model:ir.model.fields,field_description:storeroom_manager.field_storeroom_manager_storeroom_order_create_uid
+#: model:ir.model.fields,field_description:storeroom_manager.field_storeroom_manager_vehicle_brand_create_uid
+#: model:ir.model.fields,field_description:storeroom_manager.field_storeroom_manager_vehicle_model_create_uid
 msgid "Created by"
 msgstr "Creado por"
 
 #. module: storeroom_manager
-#: model:ir.model.fields,field_description:storeroom_manager.field_product_brand_create_date_6170
-#: model:ir.model.fields,field_description:storeroom_manager.field_storeroom_order_create_date
-#: model:ir.model.fields,field_description:storeroom_manager.field_vehicle_brand_create_date_6178
-#: model:ir.model.fields,field_description:storeroom_manager.field_vehicle_model_create_date_6186
+#: model:ir.model.fields,field_description:storeroom_manager.field_storeroom_manager_order_line_create_date
+#: model:ir.model.fields,field_description:storeroom_manager.field_storeroom_manager_product_brand_create_date
+#: model:ir.model.fields,field_description:storeroom_manager.field_storeroom_manager_storeroom_order_create_date
+#: model:ir.model.fields,field_description:storeroom_manager.field_storeroom_manager_vehicle_brand_create_date
+#: model:ir.model.fields,field_description:storeroom_manager.field_storeroom_manager_vehicle_model_create_date
 msgid "Created on"
 msgstr "Creado el"
 
 #. module: storeroom_manager
-#: model:ir.model.fields,field_description:storeroom_manager.field_product_brand_display_name_6175
-#: model:ir.model.fields,field_description:storeroom_manager.field_storeroom_order_display_name
-#: model:ir.model.fields,field_description:storeroom_manager.field_vehicle_brand_display_name_6183
-#: model:ir.model.fields,field_description:storeroom_manager.field_vehicle_model_display_name_6191
+#: selection:storeroom_manager.order.line,state:0
+#: selection:storeroom_manager.storeroom.order,state:0
+msgid "Delivered"
+msgstr "Entregado"
+
+#. module: storeroom_manager
+#: model:ir.model.fields,field_description:storeroom_manager.field_storeroom_manager_order_line_display_name
+#: model:ir.model.fields,field_description:storeroom_manager.field_storeroom_manager_product_brand_display_name
+#: model:ir.model.fields,field_description:storeroom_manager.field_storeroom_manager_storeroom_order_display_name
+#: model:ir.model.fields,field_description:storeroom_manager.field_storeroom_manager_vehicle_brand_display_name
+#: model:ir.model.fields,field_description:storeroom_manager.field_storeroom_manager_vehicle_model_display_name
 msgid "Display Name"
 msgstr "Mostrar Nombre"
 
 #. module: storeroom_manager
-#: model:ir.model.fields,field_description:storeroom_manager.field_storeroom_order_fecha_inicio
+#: selection:storeroom_manager.order.line,state:0
+#: selection:storeroom_manager.storeroom.order,state:0
+msgid "Draft"
+msgstr "Draft"
+
+#. module: storeroom_manager
+#: model:ir.model.fields,field_description:storeroom_manager.field_storeroom_manager_storeroom_order_fecha_inicio
 msgid "Fecha inicio"
 msgstr "Fecha inicio"
 
 #. module: storeroom_manager
-#: model:ir.model.fields,field_description:storeroom_manager.field_product_brand_id_6176
-#: model:ir.model.fields,field_description:storeroom_manager.field_storeroom_order_id
-#: model:ir.model.fields,field_description:storeroom_manager.field_vehicle_brand_id_6184
-#: model:ir.model.fields,field_description:storeroom_manager.field_vehicle_model_id_6192
+#: model:ir.model.fields,field_description:storeroom_manager.field_storeroom_manager_order_line_id
+#: model:ir.model.fields,field_description:storeroom_manager.field_storeroom_manager_product_brand_id
+#: model:ir.model.fields,field_description:storeroom_manager.field_storeroom_manager_storeroom_order_id
+#: model:ir.model.fields,field_description:storeroom_manager.field_storeroom_manager_vehicle_brand_id
+#: model:ir.model.fields,field_description:storeroom_manager.field_storeroom_manager_vehicle_model_id
 msgid "ID"
 msgstr "ID"
 
 #. module: storeroom_manager
-#: model:ir.model.fields,field_description:storeroom_manager.field_storeroom_order_informe_nro
+#: model:ir.model.fields,field_description:storeroom_manager.field_storeroom_manager_storeroom_order_informe_nro
 msgid "Informe nro"
 msgstr "Informe nro"
 
 #. module: storeroom_manager
-#: model:ir.model.fields,field_description:storeroom_manager.field_storeroom_order_km_entrada
+#: model:ir.model.fields,field_description:storeroom_manager.field_storeroom_manager_storeroom_order_km_entrada
 msgid "Km entrada"
 msgstr "Km entrada"
 
 #. module: storeroom_manager
-#: model:ir.model.fields,field_description:storeroom_manager.field_product_brand___last_update_6172
-#: model:ir.model.fields,field_description:storeroom_manager.field_storeroom_order___last_update
-#: model:ir.model.fields,field_description:storeroom_manager.field_vehicle_brand___last_update_6180
-#: model:ir.model.fields,field_description:storeroom_manager.field_vehicle_model___last_update_6188
+#: model:ir.model.fields,field_description:storeroom_manager.field_storeroom_manager_order_line___last_update
+#: model:ir.model.fields,field_description:storeroom_manager.field_storeroom_manager_product_brand___last_update
+#: model:ir.model.fields,field_description:storeroom_manager.field_storeroom_manager_storeroom_order___last_update
+#: model:ir.model.fields,field_description:storeroom_manager.field_storeroom_manager_vehicle_brand___last_update
+#: model:ir.model.fields,field_description:storeroom_manager.field_storeroom_manager_vehicle_model___last_update
 msgid "Last Modified on"
 msgstr "Última modificación en"
 
 #. module: storeroom_manager
-#: model:ir.model.fields,field_description:storeroom_manager.field_product_brand_write_uid_6173
-#: model:ir.model.fields,field_description:storeroom_manager.field_storeroom_order_write_uid
-#: model:ir.model.fields,field_description:storeroom_manager.field_vehicle_brand_write_uid_6181
-#: model:ir.model.fields,field_description:storeroom_manager.field_vehicle_model_write_uid_6189
+#: model:ir.model.fields,field_description:storeroom_manager.field_storeroom_manager_order_line_write_uid
+#: model:ir.model.fields,field_description:storeroom_manager.field_storeroom_manager_product_brand_write_uid
+#: model:ir.model.fields,field_description:storeroom_manager.field_storeroom_manager_storeroom_order_write_uid
+#: model:ir.model.fields,field_description:storeroom_manager.field_storeroom_manager_vehicle_brand_write_uid
+#: model:ir.model.fields,field_description:storeroom_manager.field_storeroom_manager_vehicle_model_write_uid
 msgid "Last Updated by"
-msgstr "Última actualización realizada por"
+msgstr "Última actualización por"
 
 #. module: storeroom_manager
-#: model:ir.model.fields,field_description:storeroom_manager.field_product_brand_write_date_6174
-#: model:ir.model.fields,field_description:storeroom_manager.field_storeroom_order_write_date
-#: model:ir.model.fields,field_description:storeroom_manager.field_vehicle_brand_write_date_6182
-#: model:ir.model.fields,field_description:storeroom_manager.field_vehicle_model_write_date_6190
+#: model:ir.model.fields,field_description:storeroom_manager.field_storeroom_manager_order_line_write_date
+#: model:ir.model.fields,field_description:storeroom_manager.field_storeroom_manager_product_brand_write_date
+#: model:ir.model.fields,field_description:storeroom_manager.field_storeroom_manager_storeroom_order_write_date
+#: model:ir.model.fields,field_description:storeroom_manager.field_storeroom_manager_vehicle_brand_write_date
+#: model:ir.model.fields,field_description:storeroom_manager.field_storeroom_manager_vehicle_model_write_date
 msgid "Last Updated on"
-msgstr "Última actualización el"
+msgstr "Última actualizacón el"
 
 #. module: storeroom_manager
-#: model:ir.model,name:storeroom_manager.model_product_brand
+#: model:ir.model,name:storeroom_manager.model_storeroom_manager_product_brand
 msgid "Miscelaneous table Product Brands"
-msgstr "Miscelaneous table Product Brands"
+msgstr "Tabla auxiliar Marcas de repuestos"
 
 #. module: storeroom_manager
-#: model:ir.model,name:storeroom_manager.model_vehicle_brand
+#: model:ir.model,name:storeroom_manager.model_storeroom_manager_vehicle_brand
 msgid "Miscelaneous table Vehicle Brand"
-msgstr "Miscelaneous table Vehicle Brand"
+msgstr "Tabla auxiliar Marcas de vehículos"
 
 #. module: storeroom_manager
-#: model:ir.model,name:storeroom_manager.model_vehicle_model
+#: model:ir.model,name:storeroom_manager.model_storeroom_manager_vehicle_model
 msgid "Miscelaneous table Vehicle Model"
-msgstr "Miscelaneous table Vehicle Model"
+msgstr "Tabla auxiliar modelos de vehículos"
 
 #. module: storeroom_manager
-#: model:ir.model.fields,field_description:storeroom_manager.field_product_brand_name_6171
-#: model:ir.model.fields,field_description:storeroom_manager.field_vehicle_brand_name_6179
-#: model:ir.model.fields,field_description:storeroom_manager.field_vehicle_model_name_6187
+#: model:ir.model.fields,field_description:storeroom_manager.field_storeroom_manager_order_line_name
+#: model:ir.model.fields,field_description:storeroom_manager.field_storeroom_manager_product_brand_name
+#: model:ir.model.fields,field_description:storeroom_manager.field_storeroom_manager_vehicle_brand_name
+#: model:ir.model.fields,field_description:storeroom_manager.field_storeroom_manager_vehicle_model_name
 msgid "Name"
 msgstr "Nombre"
 
 #. module: storeroom_manager
-#: model:ir.model.fields,field_description:storeroom_manager.field_storeroom_order_patente
+#: model:ir.model.fields,field_description:storeroom_manager.field_storeroom_manager_storeroom_order_order_line
+#: model:ir.ui.view,arch_db:storeroom_manager.view_adhoc_module_category_form
+msgid "Order Lines"
+msgstr "Líneas de la orden"
+
+#. module: storeroom_manager
+#: model:ir.model.fields,field_description:storeroom_manager.field_storeroom_manager_order_line_order_id
+msgid "Order Reference"
+msgstr "Referencia de la orden"
+
+#. module: storeroom_manager
+#: model:ir.model.fields,field_description:storeroom_manager.field_storeroom_manager_storeroom_order_patente
 msgid "Patente"
 msgstr "Patente"
+
+#. module: storeroom_manager
+#: model:ir.model.fields,field_description:storeroom_manager.field_storeroom_manager_order_line_product_id
+msgid "Product"
+msgstr "Producto"
 
 #. module: storeroom_manager
 #: model:ir.actions.act_window,name:storeroom_manager.action_product_brand
@@ -130,7 +166,43 @@ msgid "Product brand"
 msgstr "Marca del repuesto"
 
 #. module: storeroom_manager
-#: model:ir.model,name:storeroom_manager.model_storeroom_order
+#: model:ir.model.fields,field_description:storeroom_manager.field_storeroom_manager_order_line_qty
+msgid "Quantity"
+msgstr "Cantidad"
+
+#. module: storeroom_manager
+#: model:ir.ui.view,arch_db:storeroom_manager.view_adhoc_module_category_form
+msgid "Sales Order Lines"
+msgstr "Líneas en orden de venta"
+
+#. module: storeroom_manager
+#: model:ir.model.fields,field_description:storeroom_manager.field_storeroom_manager_order_line_sequence
+msgid "Sequence"
+msgstr "Secuencia"
+
+#. module: storeroom_manager
+#: model:ir.model.fields,field_description:storeroom_manager.field_storeroom_manager_order_line_state
+#: model:ir.model.fields,field_description:storeroom_manager.field_storeroom_manager_storeroom_order_state
+msgid "Status"
+msgstr "Estado"
+
+#. module: storeroom_manager
+#: model:ir.actions.act_window,name:storeroom_manager.action_storeroom
+msgid "Storeroom"
+msgstr "Pañol"
+
+#. module: storeroom_manager
+#: model:ir.ui.view,arch_db:storeroom_manager.view_adhoc_module_category_form
+msgid "Storeroom Order"
+msgstr "Orden de Pañol"
+
+#. module: storeroom_manager
+#: model:ir.model,name:storeroom_manager.model_storeroom_manager_order_line
+msgid "Storeroom Order Line"
+msgstr "Linea de la orden de Pañol"
+
+#. module: storeroom_manager
+#: model:ir.model,name:storeroom_manager.model_storeroom_manager_storeroom_order
 msgid "Storeroom delivery orders"
 msgstr "Ordenes de entrega de pañol"
 
@@ -145,22 +217,27 @@ msgid "Storeroom location Tower / Shelf"
 msgstr "Ubicacion de pañol Fila / Estante"
 
 #. module: storeroom_manager
-#: sql_constraint:product.brand:0
+#: sql_constraint:storeroom_manager.product.brand:0
 msgid "This product brand alerady exists, it must be unique !"
-msgstr "Esta marca de repuesto ya existe, debe ser única !"
+msgstr "Esta marca de vehículo ya existe, debe ser única !"
 
 #. module: storeroom_manager
-#: sql_constraint:vehicle.brand:0
+#: sql_constraint:storeroom_manager.vehicle.brand:0
 msgid "This vehicle brand already exists, it must be unique !"
 msgstr "Esta marca de vehiculo ya existe, debe ser única !"
 
 #. module: storeroom_manager
-#: sql_constraint:vehicle.model:0
+#: sql_constraint:storeroom_manager.vehicle.model:0
 msgid "This vehicle model already exists, it must be unique !"
 msgstr "Este modelo de vehículo ya existe, debe ser único !"
 
 #. module: storeroom_manager
-#: model:ir.model.fields,field_description:storeroom_manager.field_storeroom_order_unidad
+#: model:ir.ui.view,arch_db:storeroom_manager.view_adhoc_module_category_form
+msgid "Transfer Order"
+msgstr "Transferir Orden"
+
+#. module: storeroom_manager
+#: model:ir.model.fields,field_description:storeroom_manager.field_storeroom_manager_storeroom_order_unidad
 msgid "Unidad"
 msgstr "Unidad"
 
@@ -208,6 +285,7 @@ msgstr "Código de producto"
 
 #. module: storeroom_manager
 #: model:ir.ui.menu,name:storeroom_manager.storeroom_main_menu
+#: model:ir.ui.menu,name:storeroom_manager.storeroom_order_menu
 msgid "storeroom"
 msgstr "Pañol"
 

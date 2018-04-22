@@ -4,7 +4,7 @@ from openerp import api, models, fields
 
 
 class VehicleModel(models.Model):
-    _name = "vehicle.model"
+    _name = "storeroom_manager.vehicle.model"
     _description = 'Miscelaneous table Vehicle Model'
 
     name = fields.Char(

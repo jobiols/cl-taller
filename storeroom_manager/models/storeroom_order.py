@@ -36,12 +36,15 @@ class StoreroomOrder(models.Model):
 
     state = fields.Selection([
         ('draft', 'Draft'),
-        ('sent', 'Delivered')
-        ], string='Status', readonly=True, copy=False,
-        track_visibility='onchange', default='draft')
+        ('sent', 'Delivered')],
+        string='Status',
+        readonly=True,
+        copy=False,
+        track_visibility='onchange',
+        default='draft')
 
     @api.multi
-    def action_confirm(self):
+    def transfer_order(self):
         pass
 
 
@@ -49,6 +52,10 @@ class StoreroomOrderLine(models.Model):
     _name = 'storeroom_manager.order.line'
     _description = 'Storeroom Order Line'
     _order = 'order_id desc, sequence, id'
+
+    name = fields.Char(
+        default="Orden"
+    )
 
     order_id = fields.Many2one(
         'storeroom_manager.storeroom.order',
@@ -66,16 +73,22 @@ class StoreroomOrderLine(models.Model):
         ondelete='restrict',
         required=True)
 
+    qty = fields.Integer(
+        string='Quantity',
+        required=True,
+        default=1
+    )
+
     sequence = fields.Integer(
         string='Sequence',
         default=10
     )
 
     state = fields.Selection([
-        ('draft', 'Quotation'),
-        ('sent', 'Quotation Sent'),
-        ('sale', 'Sale Order'),
-        ('done', 'Done'),
-        ('cancel', 'Cancelled'),
-        ], string='Status', readonly=True, copy=False,
-        track_visibility='onchange', default='draft')
+        ('draft', 'Draft'),
+        ('sent', 'Delivered')],
+        string='Status',
+        readonly=True,
+        copy=False,
+        track_visibility='onchange',
+        default='draft')

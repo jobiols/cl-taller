@@ -25,9 +25,10 @@
             <field name="arch" type="xml">
                 <form string="Storeroom Order">
                 <header>
-                    <button name="Print storeroom order"
-                            string="Confirm Order" class="btn-primary"
+                    <button name="transfer_order"
+                            string="Transfer Order" class="btn-primary"
                             type="object" />
+                    <field name="state" widget="statusbar" statusbar_visible="draft,sent"/>
                 </header>
 
                 <sheet>
@@ -41,10 +42,10 @@
                     <notebook>
                         <page string="Order Lines">
                             <field name="order_line" mode="tree,kanban" >
-
                                 <tree string="Sales Order Lines" editable="bottom">
                                     <field name="sequence" widget="handle"/>
                                     <field name="product_id"/>
+                                    <field name="qty"/>
                                 </tree>
                             </field>
                         </page>
@@ -70,6 +71,7 @@
         <menuitem id="storeroom_order_menu"
                   action="action_storeroom"
                   name="storeroom"
+                  string="storeroom"
                   parent="storeroom_main_menu"/>
 
     </data>

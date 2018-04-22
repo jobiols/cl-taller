@@ -4,7 +4,7 @@ from openerp import api, models, fields
 
 
 class ProductBrand(models.Model):
-    _name = "product.brand"
+    _name = "storeroom_manager.product.brand"
     _description = 'Miscelaneous table Product Brands'
 
     name = fields.Char(
