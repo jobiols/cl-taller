@@ -15,16 +15,22 @@ class ProductProduct(models.Model):
     vehicle_brand = fields.Many2many(
         'storeroom_manager.vehicle.brand',
         ondelete='cascade',
-        help="Vehicle brand"
+        help="Vehicle brand",
+        required=True
     )
     vehicle_model = fields.Many2one(
         'storeroom_manager.vehicle.model',
         ondelete='cascade',
-        help="Vehicle model"
+        help="Vehicle model",
+        required=True
     )
     product_brand = fields.Many2one(
         'storeroom_manager.product.brand',
         ondelete='cascade',
-        help="Product Brand"
+        help="Product Brand",
+        required=True
     )
 
+    type = fields.Selection(
+        default='product'
+    )
