@@ -34,3 +34,7 @@ class ProductProduct(models.Model):
     type = fields.Selection(
         default='product'
     )
+
+    replacement = fields.Boolean(
+        default='False'
+    )

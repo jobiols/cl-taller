@@ -35,6 +35,10 @@
         'views/storeroom_view.xml',
         'views/miscelaneous_view.xml'
     ],
+    'demo': [
+        'demo/demo_data.xml',
+    ],
+
     'test': [
     ],
     'installable': True,

@@ -1,63 +1,149 @@
 <?xml version="1.0" encoding="utf-8"?>
-<openerp>
-    <data>
+<odoo>
 
-        <!-- agregar ubicaciones en los estantes -->
-        <record id="product_template_form_view" model="ir.ui.view">
-            <field name="name">Storeroom Manager: customization</field>
+    <!-- agregar ubicaciones en los estantes -->
+    <record id="product_template_form_view" model="ir.ui.view">
+        <field name="name">Storeroom Manager: estantes</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='group_lots_and_weight']"
+                   position="after">
+                <group name="stock_locations">
+                    <field name="storeroom_location"/>
+                    <field name="warehouse_location"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- cambiar nombre a default_code y agregar demas campos -->
+    <record id="product_template_only_form_view" model="ir.ui.view">
+        <field name="name">Storeroom Manager: customization</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id"
+               ref="product.product_template_only_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='default_code']" position="before">
+                <field name="vehicle_brand" widget="many2many_tags"/>
+                <field name="vehicle_model"/>
+                <field name="product_brand"/>
+            </xpath>
+            <xpath expr="//field[@name='default_code']"
+                   position="attributes">
+                <attribute name="string">product_code</attribute>
+            </xpath>
+
+        </field>
+    </record>
+
+    <record id="view_product_supplier_inherit" model="ir.ui.view">
+        <field name="name">product.template.supplier.form.inherit</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_form_view"/>
+        <field name="arch" type="xml">
+            <div name="options" position="inside">
+                <div>
+                <field name="replacement"/>
+                <label for="replacement"/>
+                </div>
+            </div>
+        </field>
+    </record>
+
+
+    <!-- acomodar tree view -->
+    <record id="product_template_tree_view" model="ir.ui.view">
+        <field name="name">Storeroom Manager: tree view</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_tree_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='volume']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='weight']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='categ_id']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='type']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='standard_price']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='name']" position="after">
+                <field name="default_code"/>
+                <field name="vehicle_brand"/>
+                <field name="vehicle_model"/>
+                <field name="product_brand"/>
+            </xpath>
+
+        </field>
+    </record>
+
+    <!-- agregar filtros -->
+    <record id="product_template_search_view" model="ir.ui.view">
+        <field name="name">Taller - Busqueda repuestos</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_search_view"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="filter[@name='inactive']" position="after">
+                <field name="vehicle_model"/>
+                <field name="vehicle_brand"/>
+                <field name="product_brand"/>
+            </xpath>
+
+        </field>
+    </record>
+
+        <!-- EJEMPLO
+        <record id="product_template_search_view11" model="ir.ui.view">
+            <field name="name">Taller - Busqueda repuestos1</field>
             <field name="model">product.template</field>
-            <field name="inherit_id" ref="product.product_template_form_view"/>
+            <field name="inherit_id" ref="storeroom_manager.product_template_search_view"/>
             <field name="arch" type="xml">
-                <xpath expr="//group[@name='group_lots_and_weight']"
-                       position="after">
-                    <group name="stock_locations">
-                        <field name="storeroom_location"/>
-                        <field name="warehouse_location"/>
-                    </group>
+                <xpath expr="field[@name='vehicle_model']" position="attributes">
+                    <attribute name="invisible">1</attribute>
                 </xpath>
             </field>
         </record>
+-->
 
-        <!-- cambiar nombre a default_code y agregar demas campos -->
-        <record id="product_template_only_form_view" model="ir.ui.view">
-            <field name="name">Storeroom Manager: customization</field>
+        <!-- eliminar filtros location y warehouse
+        <record id="product_template_search_form_view_stock" model="ir.ui.view">
+            <field name="name">Taller - quitar filtros</field>
             <field name="model">product.template</field>
-            <field name="inherit_id"
-                   ref="product.product_template_only_form_view"/>
-            <field name="arch" type="xml">
-                <xpath expr="//field[@name='default_code']" position="before">
-                    <field name="vehicle_brand" widget="many2many_tags"/>
-                    <field name="vehicle_model"/>
-                    <field name="product_brand"/>
-                </xpath>
-                <xpath expr="//field[@name='default_code']"
-                       position="attributes">
-                    <attribute name="string">product_code</attribute>
-                </xpath>
-
-            </field>
-        </record>
-
-        <!-- ocultar politica de facturacion
-        <record id="product_template_form_view_invoice_policy" model="ir.ui.view">
-            <field name="name">Storeroom Manager: customization</field>
-            <field name="model">product.template</field>
-            <field name="inherit_id" ref="sale.product_template_form_view_invoice_policy"/>
+            <field name="inherit_id" ref="stock.product_template_search_form_view_stock"/>
             <field name="arch" type="xml">
 
-                <xpath expr="//field[@name='invoice_policy']" position="attributes">
+                <xpath expr="filter[@name='real_stock_available']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+
+                <xpath expr="field[@name='location_id']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="field[@name='warehouse_id']" position="attributes">
                     <attribute name="invisible">1</attribute>
                 </xpath>
 
             </field>
         </record>
 -->
-        <!--
-                        <xpath expr="//field[@name='invoice_policy']" position="attributes">
-                            <attribute name="invisible">1</attribute>
-                        </xpath>
 
-        sale.product.product_template_form_view
-                -->
-    </data>
-</openerp>
+    <record id="product_template_search_view_purchase" model="ir.ui.view">
+        <field name="name">Storeroom: product filter</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="purchase.product_template_search_view_purchase"/>
+        <field name="arch" type="xml">
+            <filter name="filter_to_purchase" position="after">
+               <filter name="filter_to_replacement" string="Is a replacement" domain="[('replacement', '=', 1)]"/>
+            </filter>
+        </field>
+    </record>
+
+
+</odoo>

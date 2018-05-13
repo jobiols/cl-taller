@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <!-- vehicle_brand -->
+        <record id="vehicle_brand_1" model="storeroom_manager.vehicle.brand">
+            <field name="name">TOYOTA</field>
+        </record>
+        <record id="vehicle_brand_2" model="storeroom_manager.vehicle.brand">
+            <field name="name">FORD</field>
+        </record>
+        <record id="vehicle_brand_3" model="storeroom_manager.vehicle.brand">
+            <field name="name">VOLKSWAGEN</field>
+        </record>
+        <record id="vehicle_brand_4" model="storeroom_manager.vehicle.brand">
+            <field name="name">FIAT</field>
+        </record>
+        <record id="vehicle_brand_5" model="storeroom_manager.vehicle.brand">
+            <field name="name">BMW</field>
+        </record>
+        <record id="vehicle_brand_6" model="storeroom_manager.vehicle.brand">
+            <field name="name">Bugatti</field>
+        </record>
+        <record id="vehicle_brand_7" model="storeroom_manager.vehicle.brand">
+            <field name="name">Dacia</field>
+        </record>
+        <record id="vehicle_brand_8" model="storeroom_manager.vehicle.brand">
+            <field name="name">Alfa Romeo</field>
+        </record>
+        <record id="vehicle_brand_9" model="storeroom_manager.vehicle.brand">
+            <field name="name">TESLA</field>
+        </record>
+        <record id="vehicle_brand_10" model="storeroom_manager.vehicle.brand">
+            <field name="name">Lamborghini</field>
+        </record>
+        <record id="vehicle_brand_11" model="storeroom_manager.vehicle.brand">
+            <field name="name">Ferrari</field>
+        </record>
+        <record id="vehicle_brand_12" model="storeroom_manager.vehicle.brand">
+            <field name="name">Audi</field>
+        </record>
+        <record id="vehicle_brand_13" model="storeroom_manager.vehicle.brand">
+            <field name="name">Mercedes Benz</field>
+        </record>
+        <record id="vehicle_brand_14" model="storeroom_manager.vehicle.brand">
+            <field name="name">Kia</field>
+        </record>
+        <record id="vehicle_brand_15" model="storeroom_manager.vehicle.brand">
+            <field name="name">Porsche</field>
+        </record>
+
+        
+        <!-- product brand -->
+        
+        <record id="product_brand_1" model="storeroom_manager.product.brand">
+            <field name="name">ABC Accesorios</field>
+        </record>
+        <record id="product_brand_2" model="storeroom_manager.product.brand">
+            <field name="name">Elimax</field>
+        </record>
+        <record id="product_brand_3" model="storeroom_manager.product.brand">
+            <field name="name">Fragata</field>
+        </record>
+        <record id="product_brand_4" model="storeroom_manager.product.brand">
+            <field name="name">Techochap</field>
+        </record>
+        <record id="product_brand_5" model="storeroom_manager.product.brand">
+            <field name="name">Toyota Warnes</field>
+        </record>
+
+        <!-- vehicle brand -->
+
+        <record id="vehicle_brand_1" model="storeroom_manager.vehicle.model">
+            <field name="name">Corolla</field>
+        </record>
+        <record id="vehicle_brand_1" model="storeroom_manager.vehicle.model">
+            <field name="name">Palio</field>
+        </record>
+        <record id="vehicle_brand_1" model="storeroom_manager.vehicle.model">
+            <field name="name">Corsa</field>
+        </record>
+        <record id="vehicle_brand_1" model="storeroom_manager.vehicle.model">
+            <field name="name">Suran</field>
+        </record>
+        <record id="vehicle_brand_1" model="storeroom_manager.vehicle.model">
+            <field name="name">Gol</field>
+        </record>
+        <record id="vehicle_brand_1" model="storeroom_manager.vehicle.model">
+            <field name="name">Vento</field>
+        </record>
+        <record id="vehicle_brand_1" model="storeroom_manager.vehicle.model">
+            <field name="name">Bora</field>
+        </record>
+        <record id="vehicle_brand_1" model="storeroom_manager.vehicle.model">
+            <field name="name">Megane</field>
+        </record>
+        <record id="vehicle_brand_1" model="storeroom_manager.vehicle.model">
+            <field name="name">Duster</field>
+        </record>
+        <record id="vehicle_brand_1" model="storeroom_manager.vehicle.model">
+            <field name="name">Fluence</field>
+        </record>
+        <record id="vehicle_brand_1" model="storeroom_manager.vehicle.model">
+            <field name="name">Kangoo</field>
+        </record>
+        <record id="vehicle_brand_1" model="storeroom_manager.vehicle.model">
+            <field name="name">Kangoo</field>
+        </record>
+        <record id="vehicle_brand_1" model="storeroom_manager.vehicle.model">
+            <field name="name">Classic</field>
+        </record>
+        <record id="vehicle_brand_1" model="storeroom_manager.vehicle.model">
+            <field name="name">Corsa</field>
+        </record>
+        <record id="vehicle_brand_1" model="storeroom_manager.vehicle.model">
+            <field name="name">Meriva</field>
+        </record>
+
+        <!-- Products
+
+        <record id="product_1" model="product.template">
+            <field name="name">Bomba de Aceite</field>
+            <field name="vehicle_brand" ref="vehicle_brand_1" />
+            <field name="vehicle_model" ref="vehicle_model_1" />
+            <field name="product_brand" ref="product_brand_1" />
+        </record>
+-->
+
+    </data>
+</openerp>

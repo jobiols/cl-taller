@@ -31,17 +31,17 @@
 
         <menuitem id="storeroom_vehicle_brand_menu"
                   action="action_vehicle_brand"
-                  name="vehicle_brand"
+                  name="Vehicle brand"
                   parent="storeroom_main_menu"/>
 
         <menuitem id="storeroom_vehicle_model_menu"
                   action="action_vehicle_model"
-                  name="vehicle_model"
+                  name="Vehicle model"
                   parent="storeroom_main_menu"/>
 
         <menuitem id="storeroom_product_brand_menu"
                   action="action_product_brand"
-                  name="product_brand"
+                  name="Product brand"
                   parent="storeroom_main_menu"/>
 
     </data>

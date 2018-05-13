@@ -7,8 +7,13 @@ class StoreroomOrder(models.Model):
     _name = "storeroom_manager.storeroom.order"
     _description = 'Storeroom delivery orders'
     _order = 'fecha_inicio desc, id desc'
+    _inherit = ['mail.thread', 'ir.needaction_mixin']
 
-    order_line = fields.One2many(
+    name = fields.Char(
+        compute="_get_name",
+    )
+
+    order_lines = fields.One2many(
         'storeroom_manager.order.line',
         'order_id',
         string='Order Lines',
@@ -45,7 +50,31 @@ class StoreroomOrder(models.Model):
 
     @api.multi
     def transfer_order(self):
-        pass
+        self.do_transfer_order()
+
+    @api.multi
+    def reverse_order(self):
+        self.do_reverse_order()
+
+    @api.multi
+    @api.depends('informe_nro', 'unidad')
+    def _get_name(self):
+        for rec in self:
+            rec.name = u'Orden de entrega {} {}'.format(
+                rec.informe_nro, rec.unidad)
+
+    @api.multi
+    def do_transfer_order(self):
+        for order in self:
+            order.state = 'sent'
+            for line in order.order_lines:
+                print line.name
+
+
+    @api.multi
+    def do_reverse_order(self):
+        for order in self:
+            order.state = 'draft'
 
 
 class StoreroomOrderLine(models.Model):

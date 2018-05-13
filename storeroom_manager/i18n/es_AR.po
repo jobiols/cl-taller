@@ -52,7 +52,7 @@ msgstr "Mostrar Nombre"
 #: selection:storeroom_manager.order.line,state:0
 #: selection:storeroom_manager.storeroom.order,state:0
 msgid "Draft"
-msgstr "Draft"
+msgstr "Borrador"
 
 #. module: storeroom_manager
 #: model:ir.model.fields,field_description:storeroom_manager.field_storeroom_manager_storeroom_order_fecha_inicio

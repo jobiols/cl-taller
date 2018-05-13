@@ -36,7 +36,6 @@
 
         'product_unique',
         'account_reconciliation_menu',  # agrega boton en partner
-        'price_security',  # Restringir quien ve el precio de costo
         'base_state_active',  # Deactivate US States
         'account_fix',  # Account Fixes
         'account_invoice_tax_wizard',  # add manual taxes on invoices
