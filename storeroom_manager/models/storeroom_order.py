@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 from openerp import api, models, fields, _
-from openerp.exceptions import except_orm
-from openerp.exceptions import UserError
 
 
 class StoreroomOrder(models.Model):
@@ -14,33 +12,26 @@ class StoreroomOrder(models.Model):
     name = fields.Char(
             compute="_get_name",
     )
-
     order_lines = fields.One2many(
             'storeroom_manager.order.line',
             'order_id',
             string='Order Lines',
     )
-
     informe_nro = fields.Char(
 
     )
-
     unidad = fields.Char(
 
     )
-
     patente = fields.Char(
 
     )
-
     fecha_inicio = fields.Date(
 
     )
-
     km_entrada = fields.Char(
 
     )
-
     state = fields.Selection([
         ('draft', 'Draft'),
         ('sent', 'Delivered')],
@@ -96,44 +87,15 @@ class StoreroomOrder(models.Model):
 
     @api.multi
     def do_transfer(self, pick):
-        import wdb;            wdb.set_trace()
 
-        # forzar para que funcione aunque no haya stock
-        if not pick.force_assign():
-            raise except_orm(
-                    _('Can not assign product for transfer. Unknown error'))
+        pick.action_confirm()   # marcar por realizar
+        pick.force_assign()     # forzar disponibilidad
 
-        if not pick.move_lines and not pick.pack_operation_ids:
-            raise UserError(_(
-                'Please create some Initial Demand or Mark as Todo and create some Operations. '))
+        # poner las cantidades a mover
+        for pack in pick.pack_operation_product_ids:
+            pack.qty_done = pack.product_qty
 
-        # In draft or with no pack operations edited yet, ask if we can just do everything
-        if pick.state == 'draft' or all(
-                [x.qty_done == 0.0 for x in pick.pack_operation_ids]):
-            # If no lots when needed, raise error
-            picking_type = pick.picking_type_id
-            if (
-                picking_type.use_create_lots or picking_type.use_existing_lots):
-                for pack in pick.pack_operation_ids:
-                    if pack.product_id and pack.product_id.tracking != 'none':
-                        raise UserError(_(
-                            'Some products require lots, so you need to specify those first!'))
-
-        # If still in draft => confirm and assign
-        if pick.state == 'draft':
-            pick.action_confirm()
-            if pick.state != 'assigned':
-                pick.action_assign()
-                if pick.state != 'assigned':
-                    raise UserError(_(
-                        "Could not reserve all requested products. Please use the \'Mark as Todo\' button to handle the reservation manually."))
-
-        for pack in pick.pack_operation_ids:
-            if pack.product_qty > 0:
-                pack.write({'qty_done': pack.product_qty})
-            else:
-                pack.unlink()
-        pick.do_transfer()
+        pick.do_new_transfer()  # validar
 
         return True
 
