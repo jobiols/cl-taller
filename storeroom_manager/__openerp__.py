@@ -20,7 +20,7 @@
 # -----------------------------------------------------------------------------
 {
     'name': 'Storeroom Manager',
-    'version': '9.0.0.0.1',
+    'version': '9.0.1.0.0',
     'license': 'Other OSI approved licence',
     'category': 'Warehouse Management',
     'summary': 'Manejo del pañol',
@@ -42,7 +42,7 @@
     'test': [
     ],
     'installable': True,
-    'application': False,
+    'application': True,
     'auto_install': False,
     'images': [],
 }

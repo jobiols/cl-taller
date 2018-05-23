@@ -6,14 +6,36 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 9.0c-20180313\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-22 20:51+0000\n"
-"PO-Revision-Date: 2018-04-22 20:51+0000\n"
+"POT-Creation-Date: 2018-05-22 23:16+0000\n"
+"PO-Revision-Date: 2018-05-22 23:16+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
+
+#. module: storeroom_manager
+#: model:ir.model.fields,field_description:storeroom_manager.field_storeroom_manager_storeroom_order_message_needaction
+msgid "Action Needed"
+msgstr "Necesaria acción"
+
+#. module: storeroom_manager
+#: code:addons/storeroom_manager/models/storeroom_order.py:106
+#, python-format
+msgid "Can not assign product for transfer. Unknown error"
+msgstr "Can not assign product for transfer. Unknown error"
+
+#. module: storeroom_manager
+#: model:ir.actions.act_window,help:storeroom_manager.product_template_action_product
+msgid "Click to define a new product."
+msgstr "Haga click para definir un nuevo producto."
+
+#. module: storeroom_manager
+#: code:addons/storeroom_manager/models/storeroom_order.py:130
+#, python-format
+msgid "Could not reserve all requested products. Please use the 'Mark as Todo' button to handle the reservation manually."
+msgstr "Could not reserve all requested products. Please use the 'Mark as Todo' button to handle the reservation manually."
 
 #. module: storeroom_manager
 #: model:ir.model.fields,field_description:storeroom_manager.field_storeroom_manager_order_line_create_uid
@@ -31,7 +53,12 @@ msgstr "Creado por"
 #: model:ir.model.fields,field_description:storeroom_manager.field_storeroom_manager_vehicle_brand_create_date
 #: model:ir.model.fields,field_description:storeroom_manager.field_storeroom_manager_vehicle_model_create_date
 msgid "Created on"
-msgstr "Creado el"
+msgstr "Creado en"
+
+#. module: storeroom_manager
+#: model:ir.model.fields,help:storeroom_manager.field_storeroom_manager_storeroom_order_message_last_post
+msgid "Date of the last message posted on the record."
+msgstr "Fecha del último mensaje publicado en el registro."
 
 #. module: storeroom_manager
 #: selection:storeroom_manager.order.line,state:0
@@ -60,6 +87,21 @@ msgid "Fecha inicio"
 msgstr "Fecha inicio"
 
 #. module: storeroom_manager
+#: model:ir.model.fields,field_description:storeroom_manager.field_storeroom_manager_storeroom_order_message_follower_ids
+msgid "Followers"
+msgstr "Seguidores"
+
+#. module: storeroom_manager
+#: model:ir.model.fields,field_description:storeroom_manager.field_storeroom_manager_storeroom_order_message_channel_ids
+msgid "Followers (Channels)"
+msgstr "Seguidores (Canales)"
+
+#. module: storeroom_manager
+#: model:ir.model.fields,field_description:storeroom_manager.field_storeroom_manager_storeroom_order_message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Seguidores (Empresas)"
+
+#. module: storeroom_manager
 #: model:ir.model.fields,field_description:storeroom_manager.field_storeroom_manager_order_line_id
 #: model:ir.model.fields,field_description:storeroom_manager.field_storeroom_manager_product_brand_id
 #: model:ir.model.fields,field_description:storeroom_manager.field_storeroom_manager_storeroom_order_id
@@ -69,14 +111,39 @@ msgid "ID"
 msgstr "ID"
 
 #. module: storeroom_manager
+#: model:ir.model.fields,help:storeroom_manager.field_storeroom_manager_storeroom_order_message_unread
+msgid "If checked new messages require your attention."
+msgstr "Si está marcado, hay nuevos mensajes que requieren su atención"
+
+#. module: storeroom_manager
+#: model:ir.model.fields,help:storeroom_manager.field_storeroom_manager_storeroom_order_message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "Si está marcado, hay nuevos mensajes que requieren su atención."
+
+#. module: storeroom_manager
 #: model:ir.model.fields,field_description:storeroom_manager.field_storeroom_manager_storeroom_order_informe_nro
 msgid "Informe nro"
 msgstr "Informe nro"
 
 #. module: storeroom_manager
+#: model:ir.model.fields,field_description:storeroom_manager.field_storeroom_manager_storeroom_order_message_is_follower
+msgid "Is Follower"
+msgstr "Es un seguidor"
+
+#. module: storeroom_manager
+#: model:ir.ui.view,arch_db:storeroom_manager.product_template_search_view_purchase
+msgid "Is a replacement"
+msgstr "Es un repuesto"
+
+#. module: storeroom_manager
 #: model:ir.model.fields,field_description:storeroom_manager.field_storeroom_manager_storeroom_order_km_entrada
 msgid "Km entrada"
 msgstr "Km entrada"
+
+#. module: storeroom_manager
+#: model:ir.model.fields,field_description:storeroom_manager.field_storeroom_manager_storeroom_order_message_last_post
+msgid "Last Message Date"
+msgstr "Fecha del último mensaje"
 
 #. module: storeroom_manager
 #: model:ir.model.fields,field_description:storeroom_manager.field_storeroom_manager_order_line___last_update
@@ -85,7 +152,7 @@ msgstr "Km entrada"
 #: model:ir.model.fields,field_description:storeroom_manager.field_storeroom_manager_vehicle_brand___last_update
 #: model:ir.model.fields,field_description:storeroom_manager.field_storeroom_manager_vehicle_model___last_update
 msgid "Last Modified on"
-msgstr "Última modificación en"
+msgstr "Última modificación el"
 
 #. module: storeroom_manager
 #: model:ir.model.fields,field_description:storeroom_manager.field_storeroom_manager_order_line_write_uid
@@ -106,6 +173,11 @@ msgid "Last Updated on"
 msgstr "Última actualizacón el"
 
 #. module: storeroom_manager
+#: model:ir.model.fields,field_description:storeroom_manager.field_storeroom_manager_storeroom_order_message_ids
+msgid "Messages"
+msgstr "Mensajes"
+
+#. module: storeroom_manager
 #: model:ir.model,name:storeroom_manager.model_storeroom_manager_product_brand
 msgid "Miscelaneous table Product Brands"
 msgstr "Tabla auxiliar Marcas de repuestos"
@@ -123,13 +195,29 @@ msgstr "Tabla auxiliar modelos de vehículos"
 #. module: storeroom_manager
 #: model:ir.model.fields,field_description:storeroom_manager.field_storeroom_manager_order_line_name
 #: model:ir.model.fields,field_description:storeroom_manager.field_storeroom_manager_product_brand_name
+#: model:ir.model.fields,field_description:storeroom_manager.field_storeroom_manager_storeroom_order_name
 #: model:ir.model.fields,field_description:storeroom_manager.field_storeroom_manager_vehicle_brand_name
 #: model:ir.model.fields,field_description:storeroom_manager.field_storeroom_manager_vehicle_model_name
 msgid "Name"
 msgstr "Nombre"
 
 #. module: storeroom_manager
-#: model:ir.model.fields,field_description:storeroom_manager.field_storeroom_manager_storeroom_order_order_line
+#: model:ir.model.fields,field_description:storeroom_manager.field_storeroom_manager_storeroom_order_message_needaction_counter
+msgid "Number of Actions"
+msgstr "Número de acciones"
+
+#. module: storeroom_manager
+#: model:ir.model.fields,help:storeroom_manager.field_storeroom_manager_storeroom_order_message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "Número de mensajes que requieren una acción"
+
+#. module: storeroom_manager
+#: model:ir.model.fields,help:storeroom_manager.field_storeroom_manager_storeroom_order_message_unread_counter
+msgid "Number of unread messages"
+msgstr "Número de mensajes no leidos"
+
+#. module: storeroom_manager
+#: model:ir.model.fields,field_description:storeroom_manager.field_storeroom_manager_storeroom_order_order_lines
 #: model:ir.ui.view,arch_db:storeroom_manager.view_adhoc_module_category_form
 msgid "Order Lines"
 msgstr "Líneas de la orden"
@@ -143,6 +231,12 @@ msgstr "Referencia de la orden"
 #: model:ir.model.fields,field_description:storeroom_manager.field_storeroom_manager_storeroom_order_patente
 msgid "Patente"
 msgstr "Patente"
+
+#. module: storeroom_manager
+#: code:addons/storeroom_manager/models/storeroom_order.py:109
+#, python-format
+msgid "Please create some Initial Demand or Mark as Todo and create some Operations. "
+msgstr "Please create some Initial Demand or Mark as Todo and create some Operations. "
 
 #. module: storeroom_manager
 #: model:ir.model.fields,field_description:storeroom_manager.field_storeroom_manager_order_line_product_id
@@ -171,14 +265,31 @@ msgid "Quantity"
 msgstr "Cantidad"
 
 #. module: storeroom_manager
+#: model:ir.model.fields,field_description:storeroom_manager.field_product_template_replacement
+msgid "Replacement"
+msgstr "Repuesto"
+
+#. module: storeroom_manager
+#: model:ir.actions.act_window,name:storeroom_manager.product_template_action_product
+#: model:ir.ui.menu,name:storeroom_manager.menu_product_template_action
+msgid "Replacements"
+msgstr "Repuestos"
+
+#. module: storeroom_manager
 #: model:ir.ui.view,arch_db:storeroom_manager.view_adhoc_module_category_form
-msgid "Sales Order Lines"
-msgstr "Líneas en orden de venta"
+msgid "Reverse Order"
+msgstr "Orden inverso"
 
 #. module: storeroom_manager
 #: model:ir.model.fields,field_description:storeroom_manager.field_storeroom_manager_order_line_sequence
 msgid "Sequence"
 msgstr "Secuencia"
+
+#. module: storeroom_manager
+#: code:addons/storeroom_manager/models/storeroom_order.py:121
+#, python-format
+msgid "Some products require lots, so you need to specify those first!"
+msgstr "Some products require lots, so you need to specify those first!"
 
 #. module: storeroom_manager
 #: model:ir.model.fields,field_description:storeroom_manager.field_storeroom_manager_order_line_state
@@ -188,6 +299,8 @@ msgstr "Estado"
 
 #. module: storeroom_manager
 #: model:ir.actions.act_window,name:storeroom_manager.action_storeroom
+#: model:ir.ui.menu,name:storeroom_manager.storeroom_main_menu
+#: model:ir.ui.menu,name:storeroom_manager.storeroom_order_menu
 msgid "Storeroom"
 msgstr "Pañol"
 
@@ -242,6 +355,16 @@ msgid "Unidad"
 msgstr "Unidad"
 
 #. module: storeroom_manager
+#: model:ir.model.fields,field_description:storeroom_manager.field_storeroom_manager_storeroom_order_message_unread
+msgid "Unread Messages"
+msgstr "Mensajes No Leídos"
+
+#. module: storeroom_manager
+#: model:ir.model.fields,field_description:storeroom_manager.field_storeroom_manager_storeroom_order_message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "Contador de mensajes no leidos"
+
+#. module: storeroom_manager
 #: model:ir.actions.act_window,name:storeroom_manager.action_vehicle_brand
 msgid "Vehicle Brand"
 msgstr "Marca del vehículo"
@@ -281,13 +404,7 @@ msgstr "Marca del repuesto"
 #. module: storeroom_manager
 #: model:ir.ui.view,arch_db:storeroom_manager.product_template_only_form_view
 msgid "product_code"
-msgstr "Código de producto"
-
-#. module: storeroom_manager
-#: model:ir.ui.menu,name:storeroom_manager.storeroom_main_menu
-#: model:ir.ui.menu,name:storeroom_manager.storeroom_order_menu
-msgid "storeroom"
-msgstr "Pañol"
+msgstr "Codigo de producto"
 
 #. module: storeroom_manager
 #: model:ir.ui.menu,name:storeroom_manager.storeroom_vehicle_brand_menu
