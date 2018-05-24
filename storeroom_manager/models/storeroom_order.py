@@ -111,7 +111,6 @@ class StoreroomOrderLine(models.Model):
     name = fields.Char(
             default="Orden"
     )
-
     order_id = fields.Many2one(
             'storeroom_manager.storeroom.order',
             string='Order Reference',
@@ -120,7 +119,6 @@ class StoreroomOrderLine(models.Model):
             index=True,
             copy=False
     )
-
     product_id = fields.Many2one(
             'product.product',
             string='Product',
@@ -128,18 +126,15 @@ class StoreroomOrderLine(models.Model):
             ondelete='restrict',
             domain=[('replacement', '=', True)],
             required=True)
-
     qty = fields.Integer(
             string='Quantity',
             required=True,
             default=1
     )
-
     sequence = fields.Integer(
             string='Sequence',
             default=10
     )
-
     state = fields.Selection([
         ('draft', 'Draft'),
         ('sent', 'Delivered')],
