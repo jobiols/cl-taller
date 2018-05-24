@@ -11,7 +11,7 @@
                     <field name="informe_nro"/>
                     <field name="unidad"/>
                     <field name="patente"/>
-                    <field name="fecha_inicio"/>
+                    <field name="start_date"/>
                     <field name="km_entrada"/>
                     <field name="state"/>
                 </tree>
@@ -28,8 +28,8 @@
                         <button name="transfer_order"
                                 string="Transfer Order" class="btn-primary"
                                 type="object" states="draft"/>
-                        <button name="reverse_order"
-                                string="Reverse Order" class="btn-primary"
+                        <button name="revert_order"
+                                string="Revert Order" class="btn-primary"
                                 type="object" states="sent"/>
                         <field name="state" widget="statusbar"
                                statusbar_visible="draft,sent"/>
@@ -40,7 +40,7 @@
                             <field name="informe_nro"/>
                             <field name="unidad"/>
                             <field name="patente"/>
-                            <field name="fecha_inicio"/>
+                            <field name="start_date"/>
                             <field name="km_entrada"/>
                         </group>
                         <notebook>

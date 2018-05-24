@@ -2,15 +2,19 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 from openerp import api, models, fields, _
 
+DELIVERY_ORDERS = 7
+CUSTOMERS = 26
+STOCK = 29
+
 
 class StoreroomOrder(models.Model):
     _name = "storeroom_manager.storeroom.order"
     _description = 'Storeroom delivery orders'
-    _order = 'fecha_inicio desc, id desc'
+    _order = 'start_date desc, id desc'
     _inherit = ['mail.thread', 'ir.needaction_mixin']
 
     name = fields.Char(
-            compute="_get_name",
+            compute="_compute_name",
     )
     order_lines = fields.One2many(
             'storeroom_manager.order.line',
@@ -26,7 +30,7 @@ class StoreroomOrder(models.Model):
     patente = fields.Char(
 
     )
-    fecha_inicio = fields.Date(
+    start_date = fields.Date(
 
     )
     km_entrada = fields.Char(
@@ -44,57 +48,56 @@ class StoreroomOrder(models.Model):
     @api.multi
     def transfer_order(self):
         for order in self:
-
-            stock_picking_obj = self.env['stock.picking']
-            pick = stock_picking_obj.create({
-                'partner_id': 6,
-                'priority': '1',
-                'picking_type_id': 7,
-                'location_id': 29,
-                'move_type': 'one',
-                'min_date': '2018-01-01',
-                'origin': u'PAÑOL',
-                'location_dest_id': 26,
-                'note': ''
-            })
-
-            for order_line in order.order_lines:
-                pick.move_lines.create({
-                    'picking_id': pick.id,
-                    'product_id': order_line.product_id.id,
-                    'product_uom_qty': order_line.qty,
-                    'product_uom': 1,
-                    'location_id': 29,
-                    'name': 'nombre del producto',
-                    'location_dest_id': 26,
-                    'picking_type_id': 7,
-                })
-
-            self.do_transfer(pick)
+            self.transfer_order_items(order, STOCK, CUSTOMERS)
             order.state = 'sent'
 
     @api.multi
-    def reverse_order(self):
+    def revert_order(self):
         for order in self:
+            self.transfer_order_items(order, CUSTOMERS, STOCK)
             order.state = 'draft'
 
     @api.multi
+    def transfer_order_items(self, order, location_from, location_to):
+        stock_picking_obj = self.env['stock.picking']
+        pick = stock_picking_obj.create({
+            # 'partner_id': 6,
+            'priority': '1',
+            'picking_type_id': DELIVERY_ORDERS,
+            'min_date': order.start_date,
+            'origin': order.informe_nro,
+            'move_type': 'one',
+            'location_id': location_from,
+            'location_dest_id': location_to,
+            # 'note': ''
+        })
+        for order_line in order.order_lines:
+            pick.move_lines.create({
+                'picking_type_id': DELIVERY_ORDERS,
+                'picking_id': pick.id,
+                'product_id': order_line.product_id.id,
+                'product_uom_qty': order_line.qty,
+                'product_uom': 1,
+                'location_id': location_from,
+                'location_dest_id': location_to,
+                'name': order_line.product_id.name
+            })
+        self.do_transfer(pick)
+
+    @api.multi
     @api.depends('informe_nro', 'unidad')
-    def _get_name(self):
+    def _compute_name(self):
         for rec in self:
             rec.name = u'Orden de entrega {} {}'.format(
                     rec.informe_nro, rec.unidad)
 
     @api.multi
     def do_transfer(self, pick):
-
-        pick.action_confirm()   # marcar por realizar
-        pick.force_assign()     # forzar disponibilidad
-
+        pick.action_confirm()  # marcar por realizar
+        pick.force_assign()  # forzar disponibilidad
         # poner las cantidades a mover
         for pack in pick.pack_operation_product_ids:
             pack.qty_done = pack.product_qty
-
         pick.do_new_transfer()  # validar
 
         return True

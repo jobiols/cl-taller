@@ -83,7 +83,7 @@ msgstr "Borrador"
 
 #. module: storeroom_manager
 #: model:ir.model.fields,field_description:storeroom_manager.field_storeroom_manager_storeroom_order_fecha_inicio
-msgid "Fecha inicio"
+msgid "Start Date"
 msgstr "Fecha inicio"
 
 #. module: storeroom_manager
