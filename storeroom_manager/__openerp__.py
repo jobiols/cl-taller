@@ -26,7 +26,8 @@
     'summary': 'Manejo del pañol',
     'author': 'jeo Software',
     'depends': [
-        'product'
+        'product',
+        'purchase'
     ],
 
     'data': [
