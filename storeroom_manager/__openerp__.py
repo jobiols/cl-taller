@@ -34,7 +34,8 @@
         'security/ir.model.access.csv',
         'views/product_view.xml',
         'views/storeroom_view.xml',
-        'views/miscelaneous_view.xml'
+        'views/miscelaneous_view.xml',
+        'report/order_report.xml'
     ],
     'demo': [
         'demo/demo_data.xml',

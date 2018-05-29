@@ -42,6 +42,7 @@
                             <field name="patente"/>
                             <field name="start_date"/>
                             <field name="km_entrada"/>
+                            <field name="partner_id"/>
                         </group>
                         <notebook>
                             <page string="Order Lines">
@@ -111,6 +112,11 @@
                   id="menu_product_template_action"
                   parent="storeroom_main_menu" sequence="13"/>
 
+        <report id="report_storeroom_order_report"
+                name="storeroom_manager.storeroom_order_report"
+                model="storeroom_manager.storeroom.order"
+                string="Storeroom Orders"
+                report_type="qweb-pdf"/>
 
     </data>
 </openerp>

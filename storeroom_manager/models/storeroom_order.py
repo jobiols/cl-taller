@@ -22,19 +22,25 @@ class StoreroomOrder(models.Model):
             string='Order Lines',
     )
     informe_nro = fields.Char(
-
+            required=True
     )
     unidad = fields.Char(
 
     )
     patente = fields.Char(
-
+            required=True
     )
     start_date = fields.Date(
-
+            required=True,
+            default=fields.Date.today()
     )
     km_entrada = fields.Char(
-
+            required=True
+    )
+    partner_id = fields.Many2one(
+            'res.partner',
+            domain=[('customer', '=', True)],
+            required=True
     )
     state = fields.Selection([
         ('draft', 'Draft'),
@@ -61,7 +67,7 @@ class StoreroomOrder(models.Model):
     def transfer_order_items(self, order, location_from, location_to):
         stock_picking_obj = self.env['stock.picking']
         pick = stock_picking_obj.create({
-            # 'partner_id': 6,
+            'partner_id': order.partner_id,
             'priority': '1',
             'picking_type_id': DELIVERY_ORDERS,
             'min_date': order.start_date,
