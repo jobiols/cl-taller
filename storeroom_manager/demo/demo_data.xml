@@ -67,51 +67,51 @@
             <field name="name">Toyota Warnes</field>
         </record>
 
-        <!-- vehicle brand -->
+        <!-- vehicle model -->
 
-        <record id="vehicle_brand_1" model="storeroom_manager.vehicle.model">
+        <record id="vehicle_model_1" model="storeroom_manager.vehicle.model">
             <field name="name">Corolla</field>
         </record>
-        <record id="vehicle_brand_1" model="storeroom_manager.vehicle.model">
+        <record id="vehicle_model_2" model="storeroom_manager.vehicle.model">
             <field name="name">Palio</field>
         </record>
-        <record id="vehicle_brand_1" model="storeroom_manager.vehicle.model">
+        <record id="vehicle_model_3" model="storeroom_manager.vehicle.model">
             <field name="name">Corsa</field>
         </record>
-        <record id="vehicle_brand_1" model="storeroom_manager.vehicle.model">
+        <record id="vehicle_model_4" model="storeroom_manager.vehicle.model">
             <field name="name">Suran</field>
         </record>
-        <record id="vehicle_brand_1" model="storeroom_manager.vehicle.model">
+        <record id="vehicle_model_5" model="storeroom_manager.vehicle.model">
             <field name="name">Gol</field>
         </record>
-        <record id="vehicle_brand_1" model="storeroom_manager.vehicle.model">
+        <record id="vehicle_model_6" model="storeroom_manager.vehicle.model">
             <field name="name">Vento</field>
         </record>
-        <record id="vehicle_brand_1" model="storeroom_manager.vehicle.model">
+        <record id="vehicle_model_7" model="storeroom_manager.vehicle.model">
             <field name="name">Bora</field>
         </record>
-        <record id="vehicle_brand_1" model="storeroom_manager.vehicle.model">
+        <record id="vehicle_model_8" model="storeroom_manager.vehicle.model">
             <field name="name">Megane</field>
         </record>
-        <record id="vehicle_brand_1" model="storeroom_manager.vehicle.model">
+        <record id="vehicle_model_9" model="storeroom_manager.vehicle.model">
             <field name="name">Duster</field>
         </record>
-        <record id="vehicle_brand_1" model="storeroom_manager.vehicle.model">
+        <record id="vehicle_model_10" model="storeroom_manager.vehicle.model">
             <field name="name">Fluence</field>
         </record>
-        <record id="vehicle_brand_1" model="storeroom_manager.vehicle.model">
+        <record id="vehicle_model_11" model="storeroom_manager.vehicle.model">
             <field name="name">Kangoo</field>
         </record>
-        <record id="vehicle_brand_1" model="storeroom_manager.vehicle.model">
+        <record id="vehicle_model_12" model="storeroom_manager.vehicle.model">
             <field name="name">Kangoo</field>
         </record>
-        <record id="vehicle_brand_1" model="storeroom_manager.vehicle.model">
+        <record id="vehicle_model_13" model="storeroom_manager.vehicle.model">
             <field name="name">Classic</field>
         </record>
-        <record id="vehicle_brand_1" model="storeroom_manager.vehicle.model">
+        <record id="vehicle_model_14" model="storeroom_manager.vehicle.model">
             <field name="name">Corsa</field>
         </record>
-        <record id="vehicle_brand_1" model="storeroom_manager.vehicle.model">
+        <record id="vehicle_model_15" model="storeroom_manager.vehicle.model">
             <field name="name">Meriva</field>
         </record>
 
