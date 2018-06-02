@@ -38,7 +38,7 @@
         'report/order_report.xml'
     ],
     'demo': [
-        'demo/demo_data.xml',
+        #  'demo/demo_data.xml',
     ],
 
     'test': [
