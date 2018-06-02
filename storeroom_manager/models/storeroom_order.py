@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
-from openerp import api, models, fields, _
+from openerp import api, models, fields
 
 DELIVERY_ORDERS = 7
 CUSTOMERS = 26
@@ -14,42 +14,42 @@ class StoreroomOrder(models.Model):
     _inherit = ['mail.thread', 'ir.needaction_mixin']
 
     name = fields.Char(
-            compute="_compute_name",
+        compute="_compute_name",
     )
     order_lines = fields.One2many(
-            'storeroom_manager.order.line',
-            'order_id',
-            string='Order Lines',
+        'storeroom_manager.order.line',
+        'order_id',
+        string='Order Lines',
     )
     informe_nro = fields.Char(
-            required=True
+        required=True
     )
     unidad = fields.Char(
 
     )
     patente = fields.Char(
-            required=True
+        required=True
     )
     start_date = fields.Date(
-            required=True,
-            default=fields.Date.today()
+        required=True,
+        default=fields.Date.today()
     )
     km_entrada = fields.Char(
-            required=True
+        required=True
     )
     partner_id = fields.Many2one(
-            'res.partner',
-            domain=[('customer', '=', True)],
-            required=True
+        'res.partner',
+        domain=[('customer', '=', True)],
+        required=True
     )
     state = fields.Selection([
         ('draft', 'Draft'),
         ('sent', 'Delivered')],
-            string='Status',
-            readonly=True,
-            copy=False,
-            track_visibility='onchange',
-            default='draft')
+        string='Status',
+        readonly=True,
+        copy=False,
+        track_visibility='onchange',
+        default='draft')
 
     @api.multi
     def transfer_order(self):
@@ -95,7 +95,7 @@ class StoreroomOrder(models.Model):
     def _compute_name(self):
         for rec in self:
             rec.name = u'Orden de entrega {} {}'.format(
-                    rec.informe_nro, rec.unidad)
+                rec.informe_nro, rec.unidad)
 
     @api.multi
     def do_transfer(self, pick):
@@ -115,37 +115,37 @@ class StoreroomOrderLine(models.Model):
     _order = 'order_id desc, sequence, id'
 
     name = fields.Char(
-            default="Orden"
+        default="Orden"
     )
     order_id = fields.Many2one(
-            'storeroom_manager.storeroom.order',
-            string='Order Reference',
-            required=True,
-            ondelete='cascade',
-            index=True,
-            copy=False
+        'storeroom_manager.storeroom.order',
+        string='Order Reference',
+        required=True,
+        ondelete='cascade',
+        index=True,
+        copy=False
     )
     product_id = fields.Many2one(
-            'product.product',
-            string='Product',
-            change_default=True,
-            ondelete='restrict',
-            domain=[('replacement', '=', True)],
-            required=True)
+        'product.product',
+        string='Product',
+        change_default=True,
+        ondelete='restrict',
+        domain=[('replacement', '=', True)],
+        required=True)
     qty = fields.Integer(
-            string='Quantity',
-            required=True,
-            default=1
+        string='Quantity',
+        required=True,
+        default=1
     )
     sequence = fields.Integer(
-            string='Sequence',
-            default=10
+        string='Sequence',
+        default=10
     )
     state = fields.Selection([
         ('draft', 'Draft'),
         ('sent', 'Delivered')],
-            string='Status',
-            readonly=True,
-            copy=False,
-            track_visibility='onchange',
-            default='draft')
+        string='Status',
+        readonly=True,
+        copy=False,
+        track_visibility='onchange',
+        default='draft')
