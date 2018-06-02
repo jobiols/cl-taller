@@ -67,7 +67,7 @@ class StoreroomOrder(models.Model):
     def transfer_order_items(self, order, location_from, location_to):
         stock_picking_obj = self.env['stock.picking']
         pick = stock_picking_obj.create({
-            'partner_id': order.partner_id,
+            'partner_id': order.partner_id.id,
             'priority': '1',
             'picking_type_id': DELIVERY_ORDERS,
             'min_date': order.start_date,
