@@ -99,6 +99,7 @@
         </record>
 
         <menuitem id="storeroom_main_menu"
+                  groups="group_storeroom_users,base.group_erp_manager"
                   name="Storeroom"/>
 
         <menuitem id="storeroom_order_menu"
