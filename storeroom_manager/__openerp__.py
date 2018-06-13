@@ -31,8 +31,8 @@
     ],
 
     'data': [
-        'security/ir.model.access.csv',
         'security/security_groups.xml',
+        'security/ir.model.access.csv',
         'views/product_view.xml',
         'views/storeroom_view.xml',
         'views/miscelaneous_view.xml',
