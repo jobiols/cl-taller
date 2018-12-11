@@ -20,7 +20,7 @@
 # -----------------------------------------------------------------------------
 {
     'name': 'Taller',
-    'version': '9.0.0.0.0',
+    'version': '9.0.0.0.1',
     'license': 'Other OSI approved licence',
     'category': 'Tools',
     'summary': 'Customización TALLER INTEGRAL LO PRIORE SA',
@@ -33,6 +33,7 @@
         'purchase', 'l10n_ar_aeroo_purchase',  # compras
         'account_accountant',  # permisos para contabilidad
         'l10n_ar_aeroo_stock',
+        'l10n_ar_account_withholding',
 
         'product_unique',
         'account_reconciliation_menu',  # agrega boton en partner
