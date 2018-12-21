@@ -27,6 +27,7 @@
     'author': 'jeo Software',
     'depends': [
         'support_branding_jeosoft',
+        'l10n_ar_aeroo_einvoice',
 
         # aplicaciones instaladas
         'sale', 'l10n_ar_aeroo_sale',  # ventas
@@ -50,6 +51,7 @@
     ],
 
     'data': [
+        'views/custom_reports.xml'
     ],
     'test': [
     ],

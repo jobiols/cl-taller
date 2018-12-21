@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="0">
+        <record id="l10n_ar_aeroo_einvoice.action_aeroo_report_ar_einvoice"
+                model="ir.actions.report.xml">
+            <field name="report_rml">taller_default/einvoice_with_footer.odt</field>
+            <field name="background_image" type="base64" file="taller_default/einvoice.png"/>
+        </record>
+    </data>
+</openerp>
