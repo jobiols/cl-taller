@@ -28,6 +28,7 @@
     'depends': [
         'support_branding_jeosoft',
         'l10n_ar_aeroo_einvoice',
+        'account_withh_percep_auto',
 
         # aplicaciones instaladas
         'sale', 'l10n_ar_aeroo_sale',  # ventas
