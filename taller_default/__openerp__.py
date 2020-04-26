@@ -20,7 +20,7 @@
 # -----------------------------------------------------------------------------
 {
     'name': 'Taller',
-    'version': '9.0.0.0.2',
+    'version': '9.0.0.0.3',
     'license': 'Other OSI approved licence',
     'category': 'Tools',
     'summary': 'Customización TALLER INTEGRAL LO PRIORE SA',
